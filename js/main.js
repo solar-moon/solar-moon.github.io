@@ -3203,7 +3203,7 @@ var _moment2 = _interopRequireDefault(_moment);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var TARGET = (0, _moment2.default)('2015-11-28 20:30:00+0100').utc();
+var TARGET = (0, _moment2.default)('2015-11-28 21:00:00+0100').utc();
 
 var hh = document.getElementById('H');
 var mm = document.getElementById('M');
