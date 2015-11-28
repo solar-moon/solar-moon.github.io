@@ -3205,8 +3205,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var TARGET = (0, _moment2.default)('2015-11-28 19:00:00+0100').utc();
 
-var diff = (0, _moment2.default)(TARGET.diff((0, _moment2.default)().utc())).utc();
-
 var hh = document.getElementById('H');
 var mm = document.getElementById('M');
 var ss = document.getElementById('s');
@@ -3222,7 +3220,7 @@ Number.prototype.pad = function (size) {
 };
 
 setInterval(function () {
-  diff = diff.subtract(_moment2.default.duration(10, 'ms'));
+  var diff = (0, _moment2.default)(TARGET.diff((0, _moment2.default)().utc())).utc();
 
   var h = diff.hours();
   var m = diff.minutes();
@@ -3234,6 +3232,6 @@ setInterval(function () {
   hh.innerHTML = h.pad(2);
   mm.innerHTML = m.pad(2);
   ss.innerHTML = s.pad(2) + '.' + cs.pad(2);
-}, 10);
+}, 30);
 
 },{"moment":1}]},{},[2]);
